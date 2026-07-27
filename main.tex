@@ -1,0 +1,117 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage[margin=1.8cm]{geometry}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{helvet}
+
+% Utilisation de la police Sans-Serif pour un rendu moderne
+\renewcommand{\familydefault}{\sfdefault}
+
+% --- PALETTE DE COULEURS ---
+\definecolor{primary}{HTML}{0E2A47}    % Bleu marine (Titres)
+\definecolor{secondary}{HTML}{2563EB}  % Bleu accent (Lignes, puces, liens)
+\definecolor{textdark}{HTML}{1E293B}   % Charcoal très sombre (Texte principal)
+\definecolor{textgray}{HTML}{64748B}   % Gris neutre (Dates, lieux)
+
+% Application du texte sombre sur tout le document
+\color{textdark}
+
+% Configuration des liens
+\hypersetup{
+    colorlinks=true,
+    linkcolor=secondary,
+    urlcolor=secondary
+}
+
+% Style des titres de section (Correction du bug de fuite de couleur)
+\newcommand{\cvsection}[1]{%
+  \vspace{1.1em}%
+  {\color{primary}\Large\bfseries\uppercase{#1}}\\[0.1em]%
+  {\color{secondary}\rule{\linewidth}{1pt}}%
+  \vspace{0.4em}%
+}
+
+% Style des puces
+\setlist[itemize]{left=1em, label=\textcolor{secondary}{\small$\bullet$}, itemsep=0.2em, parsep=0pt, topsep=0.2em}
+
+\pagestyle{empty}
+
+\begin{document}
+
+% --- EN-TÊTE ---
+\begin{minipage}[c]{0.70\textwidth}
+    {\Huge \textbf{\color{primary}Thélio Olivier Geiser}} \\[0.4em]
+    {\large \color{secondary}\bfseries Étudiant en 2\textsuperscript{e} année de Génie Mécanique à l'EPFL} \\[0.8em]
+    {\small \color{textdark}
+    La Tour-de-Peilz, Suisse \quad|\quad +41 78 727 10 57 \\
+    \href{mailto:thelio.geiser@gmail.com}{thelio.geiser@gmail.com} \quad|\quad Né le 10 février 2005
+    }
+\end{minipage}%
+\hfill
+\begin{minipage}[c]{0.26\textwidth}
+    \begin{flushright}
+        \includegraphics[width=3.2cm,height=4.2cm,keepaspectratio]{WhatsApp Image 2025-08-21 à 11.13.45_9a0f3007.jpg}
+    \end{flushright}
+\end{minipage}
+
+\vspace{0.5em}
+
+% --- PROFIL ---
+\cvsection{Profil}
+Étudiant en \textbf{2\textsuperscript{e} année de Génie Mécanique à l'EPFL}, j'associe un solide socle en ingénierie (mathématiques, physique, CAO) à des compétences pratiques en \textbf{développement web}, \textbf{conteneurisation (Docker)} et \textbf{Intelligence Artificielle} (inférence de LLM, Ollama, fondements du Machine Learning). Rigoureux et adaptable, je sais gérer le stress et faire preuve de persévérance pour mener à bien des projets complexes, avec une approche centrée sur le détail sans perdre de vue la vision globale.
+
+% --- FORMATION ---
+\cvsection{Formation}
+
+\noindent\textbf{École Polytechnique Fédérale de Lausanne (EPFL)} \hfill {\color{textgray}\small 2024 -- Présent} \\
+\textit{Bachelor en Génie Mécanique — 2\textsuperscript{e} année} \\[0.5em]
+
+\noindent\textbf{Gymnase de Burier} – La Tour-de-Peilz, Suisse \hfill {\color{textgray}\small Obtenu en 2024} \\
+\textit{Maturité suisse, Option spécifique : Applications des Mathématiques et Physique (Mathématiques renforcées)} \\[0.5em]
+
+\noindent\textbf{Établissement primaire et secondaire de La Tour-de-Peilz} \hfill {\color{textgray}\small 2014 -- 2020} \\
+\textit{Scolarité obligatoire (Option spécifique : Applications des Maths et Physique)}
+
+% --- COMPÉTENCES ---
+\cvsection{Compétences}
+
+\begin{description}[leftmargin=0pt, labelindent=0pt, itemsep=0.3em]
+    \item[\textcolor{primary}{Développement Web :}] HTML5, CSS3, JavaScript, Astro, React
+    \item[\textcolor{primary}{Programmation \& Ingénierie :}] Python, C, CATIA V5 et Fusion360 (CAO), \LaTeX
+    \item[\textcolor{primary}{DevOps \& Environnement :}] Docker, Linux
+    \item[\textcolor{primary}{Langues :}] Français (\textit{natif}), Anglais (\textit{B2} — séjour de 6 mois au Canada), Allemand (\textit{B2} — séjour de 4 mois en Allemagne)
+    \item[\textcolor{primary}{Permis :}] Permis de conduire Voiture (B) et Moto (A)
+\end{description}
+
+% --- EXPÉRIENCE PROFESSIONNELLE ---
+\cvsection{Expérience Professionnelle}
+
+\noindent\textbf{Employé polyvalent (extra)} – Funplanet, Rennaz \hfill {\color{textgray}\small Mars 2024 -- Août 2024}
+\begin{itemize}
+    \item Participation active à la logistique et aux opérations quotidiennes de l'établissement.
+    \item Accueil, assistance clientèle et gestion autonome de tâches variées en environnement dynamique.
+\end{itemize}
+
+% --- STAGES ---
+\cvsection{Stages}
+
+\noindent\textbf{Stagiaire} – De Pury Pictet Turrettini, Genève \hfill {\color{textgray}\small 2 semaines}
+\begin{itemize}
+    \item Numérisation, classification et archivage de documents financiers confidentiels.
+    \item Application stricte des procédures de tri et de destruction sécurisée de dossiers de comptes.
+\end{itemize}
+
+% --- CENTRES D’INTÉRÊT ---
+\cvsection{Centres d'intérêts}
+\begin{itemize}
+    \item \textbf{Sports mécaniques :} Passionné par la mécanique automobile et moto.
+    \item \textbf{Condition physique :} Pratique régulière du fitness.
+    \item \textbf{Mécanique :} Passion pour la mécanique auto et moto, bricoleur du dimanche.
+\end{itemize}
+
+\end{document}
